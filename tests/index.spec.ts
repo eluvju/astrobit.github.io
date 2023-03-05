@@ -8,7 +8,7 @@ import { chromium } from '@playwright/test';
   const page = await browser.newPage();
 
   // Navega até a página desejada
-  await page.goto('https://www.exemplo.com');
+  await page.goto('https://eluvju.github.io/astrobit.github.io/');
 
   // Tira um screenshot da página após o carregamento
   await page.screenshot({ path: 'pagina.png' });
