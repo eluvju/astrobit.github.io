@@ -9,8 +9,8 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astrobit.github.io',
-  base: '/astrobit.github.io',
+  site: 'https://eluvju.github.io/astrobit',
+  base: '/astrobit',
   integrations: [tailwind(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
   }), compress()]
