@@ -1,0 +1,45 @@
+---
+import Social from './Social.astro';
+import { Image, Picture } from "@astrojs/image/components";
+import avatar from "../assets/img/logo_astrobit.png";
+
+export interface Props {
+    subtitle: string;
+    title: string;
+    tagline: string;
+}
+
+const { subtitle, title, tagline } = Astro.props;
+const socials = await Astro.glob("./../pages/socials/*.md");
+---
+
+<div>
+    <div class="mx-auto max-w-7xl py-16 px-4 sm:py-10 sm:px-6 lg:px-8">
+        <div class="text-center">
+            
+            <div class="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56">
+            <Image 
+            src={avatar}
+            alt="Muniz Logotype"
+            width='500'
+            format='webp'
+            aspectRatio={"1:1"}
+            quality={100}>
+            </Image></div>
+            
+            <h2 class="mt-4 text-4xl font-bold tracking-tight text-textcolor sm:text-5xl lg:text-6xl">
+                {title}
+            </h2>
+
+            <p class="text-2xl font-semibold text-textcolor mt-5 ">
+                {subtitle}
+            </p>
+
+            <p class="mx-auto mt-5 max-w-xl text-xl text-primary">
+             #<a hrer="#" class="mx-auto mt-5 max-w-xl text-xl text-white">{tagline}</a>
+            </p>
+
+            <Social socials={socials} />
+        </div>
+    </div>
+</div>
