@@ -1,4 +1,4 @@
-const { chromium } = require('playwright');
+import { chromium } from '@playwright/test';
 
 (async () => {
   // Inicia o navegador Chromium
