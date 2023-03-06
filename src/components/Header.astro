@@ -27,16 +27,16 @@ const socials = await Astro.glob("./../pages/socials/*.md");
             quality={100}>
             </Image></div>
             
-            <h2 class="mt-4 text-4xl font-bold tracking-tight text-textcolor sm:text-5xl lg:text-6xl">
+            <h1 class="mt-4 text-4xl font-bold tracking-tight text-textcolor sm:text-5xl lg:text-6xl">
                 {title}
-            </h2>
+            </h1>
 
-            <p class="text-2xl font-semibold text-textcolor mt-5 ">
+            <h3 class="text-2xl font-semibold text-textcolor mt-5 ">
                 {subtitle}
-            </p>
+            </h3>
 
             <p class="mx-auto mt-5 max-w-xl text-xl text-primary">
-             #<a hrer="#" class="mx-auto mt-5 max-w-xl text-xl text-white">{tagline}</a>
+             #<a hrer="#" class="mx-auto mt-5 max-w-xl text-xl text-white font-semibold">{tagline}</a>
             </p>
 
             <Social socials={socials} />
